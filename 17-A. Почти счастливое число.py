@@ -1,14 +1,11 @@
-n = int(input())
+a = list(map(int, input()))
 
-count = 0
-for i in str(n):
-    if i == '4' or i == '7':
-        count += 1
+b = a.count(7)
+c = a.count(4)
+x = {4, 7}
 
-count_str = str(count)
-is_almost_lucky = all(c in '47' for c in count_str)
 
-if is_almost_lucky:
-    print("YES")
+if (b + c) in x:
+    print('YES')
 else:
-    print("NO")
+    print('NO')
