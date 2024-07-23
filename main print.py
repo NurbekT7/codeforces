@@ -1,10 +1,15 @@
 import sys
 
 
-def custom_print(*args, sep=' ', end='\n', file=sys.stdout):
+def printn(*args, sep=' ', end='\n', file=sys.stdout):
     output = sep.join(map(str, args))
     file.write(output + end)
 
 
-a = input()
-custom_print(a)
+def inputn(variable=''):
+    sys.stdout.write(variable)
+    sys.stdout.flush()
+    return sys.stdin.readline().rstrip('\n')
+
+
+printn(inputn())
